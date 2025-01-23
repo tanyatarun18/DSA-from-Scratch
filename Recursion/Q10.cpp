@@ -10,29 +10,29 @@
 using namespace std;
 
 //Naive Approach
-// int sum1(){
-//     list<int> m;
-//     int n , value;
-//     cin >> n;
-//     int sum = 0;
+int sum1(){
+    list<int> m;
+    int n , value;
+    cin >> n;
+    int sum = 0;
 
-//     for(int i=0; i<n;i++){
-//         cin>>value;
-//         sum +=value;
-//     }
-//     cout << sum;
+    for(int i=0; i<n;i++){
+        cin>>value;
+        sum +=value;
+    }
+    cout << sum;
 
-// }
+}
 
 //Recursive Approach
-// int sum2(int arr[], int size){
+int sum2(int arr[], int size){
     
-//     if(size == 0){
-//         return 0;
-//     }
+    if(size == 0){
+        return 0;
+    }
 
-//     return arr[0] + sum2(arr+1,size-1);
-// }
+    return arr[0] + sum2(arr+1,size-1);
+}
 
 //Built-in function
 
@@ -49,8 +49,8 @@ int sum3(){
 
 
 int main(){
-    //sum1();
+    sum1();
     int arr[] = {1,2,3,4,5};
-    //cout << sum2(arr,5);
+    cout << sum2(arr,5);
     sum3();
 }
