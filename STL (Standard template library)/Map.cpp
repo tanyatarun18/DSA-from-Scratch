@@ -25,12 +25,13 @@ void maps(){
     //If the key is not there, it will return null.
     cout << it->second;
 
-    auto it = m.lower_bound(1);
-    auto it = m.upper_bound(2);
+    auto it1 = m.lower_bound(1);
+    auto it2 = m.upper_bound(2);
 
     //Rest begin, rbegin, end, lower_bound, upper_bound, etc are same as vectors and set
 }
 
 int main(){
     maps();
+
 }

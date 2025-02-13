@@ -17,7 +17,7 @@ void pairs() {
 }
 
 int main() {
-    // pairs();
+    pairs();
     
     return 0;
 }
