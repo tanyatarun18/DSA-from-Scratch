@@ -1,15 +1,21 @@
 #include <iostream>
 using namespace std;
 
-//Print N to 1 recursively using backtrackng.
-void print(int n, int a){
-    if(a > n){
+//Reverse an array using recursion
+void reverses(int arr[], int m, int n){
+    if(m>=n){
         return;
     }
-    print(n,a+1);
-    cout << a << " ";
+    swap(arr[m],arr[n]);
+    reverses(arr,m+1,n-1);
 }
-
 int main(){
-    print(5,1);
+    int arr[] = {1,2,3,4,5,6,7};
+    int m=0;
+    int n = (sizeof(arr)/ sizeof(arr[0]))-1;
+    reverses(arr,m,n);
+    for (int i = 0; i <= n; i++) {
+        cout << arr[i] << " ";
+    }
+
 }

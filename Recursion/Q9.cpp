@@ -1,16 +1,26 @@
 #include <iostream>
 using namespace std;
 
-//Check if the given string is palindrome or not. 
-//Palindrome means that the string when reversed reads the same.
-bool palindrome(int i, string st){
-    if(i >= st.size()/2) return true;
-    if(st[i]!= st[st.size()-i-1]) return false;
-    return palindrome(i+1,st);
-
+//Check if a given number is prime or not.
+bool checkPrime(int n, int i, int cnt){
+    cout<<i<<endl;
+    if(i>n){
+        if(cnt == 2){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    if(n%i == 0){
+        cnt++;
+        cout<<"number is "<<i<<" "<<cnt<<endl;
+    }
+    checkPrime(n,i+1,cnt);
 }
 int main(){
-    string st = "mada";
-    cout << palindrome(0,st);
-    
+    int n;
+    cout << "Enter the number";
+    cin >> n;
+    cout<<checkPrime(n,1,0);
 }

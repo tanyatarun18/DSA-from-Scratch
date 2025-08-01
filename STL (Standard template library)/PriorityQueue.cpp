@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//PRIORITY QUEUES follows that the element stays at the top, no matter which element goes first or last.
+//PRIORITY QUEUES follows that the largest element stays at the top, no matter which element goes first or last.
 //This is also called Maximum Heap or Max Heap.
 void priority_queues(){
     priority_queue<int> pq;

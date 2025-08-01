@@ -1,16 +1,18 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-//Print the factorial of N.
-int fact1(int n){ 
-    if(n==0){
-        return 1;
+// Write a program that accepts a list of integers and calculates the sum of the integers using recursion.
+int calcSum(int arr[], int n, int a, int sum){
+    if(a >= n){
+        return sum;
     }
-    return n * fact1(n-1);
+    sum = sum + arr[a];
+    calcSum(arr,n,a+1,sum);
 
-} 
-
+}
 int main(){
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/ sizeof(arr[0]);
+    cout << calcSum(arr,n,0,0);
 
-    cout << fact1(6);
 }

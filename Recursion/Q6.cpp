@@ -1,23 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-//Print sum of first N numbers using recursion
-int sum = 0;
-void sum1(int n){
-    if (n == 0){
-        cout << sum;
+//Check if the given string is palindrome or not. 
+int palindromes(string s, int a, int b){
+    if(a == b){
+        return true;
     }
-
-    sum += n;
-    sum1(n-1);
-
+    if(s[a] != s[b]) return false;
+    return palindromes(s,a+1,b-1);
+    
 }
 
 int main(){
-    int n;
-    cin >> n;
-    sum1(n);
+    string s = "MADAM";
+    int a = 0;
+    int b = s.size()-1;
+    if(palindromes(s,a,b)){
+        cout << s << " is palindrome.";
+    }
+    else{
+        cout << s << " is not palindrome.";
+    }
 }
-//Here we are telling that when we reach the base case, then print the sum. so, we are first adding sum(0) with 5(n), then calling the 
-//function again then adding sum(5) with 4(n), and again repeating the same thing until n becomes zero. 
-//We are using backtracking to retrieve the value of n. 

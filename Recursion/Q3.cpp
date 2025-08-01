@@ -1,18 +1,16 @@
-#include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
 
-//Print n to 1 using recursion
-
-void print(int a){
-    if(a == 0){
-        return;
+// Print sum of n numbers using recursion
+void prints(int n,int a){
+    if(n == 0){
+        cout << a ;
     }
-    cout << a << " ";
-    a--;
-    print(a);
 
+    a+=n;
+    prints(n-1,a);
 }
+
 int main(){
-    print(5);
+    prints(5,0);
 }
