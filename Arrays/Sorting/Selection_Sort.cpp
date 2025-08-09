@@ -25,3 +25,4 @@ int main(){
 // so selection me basically hm first element ko min consider krte h by using the lopp of i. Fir uske baad hm dusra loop chlate h j ka jo 
 // i se start hota h and compare krta h ki agar koi element hmare considered minimum se chhota h toh min ka pointer uss j p shift ho jata h
 // jo chhota ho and then min aur i ko swap kr dete h hm jisse choota front m aa jata h and then ye process continue hote jata h. 
+
